@@ -18,6 +18,8 @@ class DbUtil{
     );
   }
 
+  //
+
   static Future<void>insert(String table, Map<String,dynamic> data)async{
     final db = await DbUtil.database();
     await db.insert(table, data, conflictAlgorithm: ConflictAlgorithm.replace);
